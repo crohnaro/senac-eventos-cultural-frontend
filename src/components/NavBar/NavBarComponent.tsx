@@ -14,8 +14,8 @@ export default function NavBarComponent() {
           <>
             <Link to="/eventos">Eventos</Link>
             <Link to="/meus-eventos">Meus Eventos</Link>
-            {user.role === 'organizer' && (
-              <Link to="/painel-eventos">Painel de Eventos</Link>
+            {user.role === 'ORGANIZER' && (
+              <Link to="/create_events">Painel de Eventos</Link>
             )}
             <button onClick={logout}>Sair</button>
           </>
