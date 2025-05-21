@@ -39,3 +39,17 @@
 .nav-links > button:hover {
   background-color: #FDC180;  /* Laranja claro */
 }
+
+
+/* ListEventsPage.module.css */
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;           /* ocupa toda a altura da viewport */
+  width: 100%;
+  color: #004C94;           /* Azul Senac */
+  font-size: 1.5rem;
+  font-weight: 500;
+}
