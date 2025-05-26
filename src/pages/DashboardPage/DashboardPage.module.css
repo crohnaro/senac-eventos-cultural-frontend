@@ -1,0 +1,218 @@
+/* MyEventsPage.module.css */
+
+/* Container e layout principal */
+.container {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family: 'Arial', sans-serif;
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+}
+
+/* Botão de criar novo evento abaixo do título */
+.addButtonContainer {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.addButton {
+  background-color: #F7931E; /* Laranja Senac */
+  border: none;
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.addButton:hover {
+  background-color: #c76b15;
+}
+
+/* Mensagem de erro */
+.error {
+  color: #D8000C;
+  background-color: #FFBABA;
+  border: 1px solid #D8000C;
+  padding: 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Tabela de eventos em card flutuante */
+.table {
+  width: 100%;
+  margin: 0 auto 2rem;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.table th,
+.table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.table th {
+  background-color: #fafafa;
+  font-weight: 600;
+  color: #333;
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Ações (botões dentro da tabela) (botões dentro da tabela) */
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.deleteBtn {
+  padding: 0.4rem 0.75rem ;
+  border: none !important;
+  background-color: #D8000C !important;
+  color: #fff !important;
+  font-size: 0.875rem !important;
+  border-radius: 4px !important;
+  cursor: pointer !important;
+  transition: background-color 0.2s ease !important;
+}
+
+.deleteBtn:hover {
+  background-color: #7c0006 !important;
+}
+
+.actions button {
+  padding: 0.4rem 0.75rem;
+  border: none;
+  background-color: #F7931E; 
+  color: #fff;
+  font-size: 0.875rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+
+
+.actions button:hover {
+  background-color: #c76b15;
+}
+
+/* Overlay e modal */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.modal h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #333;
+  text-align: center;
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.modal label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.875rem;
+  color: #555;
+}
+
+.modal input[type="text"],
+.modal input[type="number"],
+.modal textarea,
+.modal input[type="file"] {
+  margin-top: 0.25rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.modal textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Ações de modal (botões de cancelar/salvar) */
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.modalActions button {
+  padding: 0.5rem 1rem;
+  border: none;
+  font-size: 0.875rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modalActions button[type="button"] {
+  background-color: #e2e8f0;
+  color: #333;
+}
+
+.modalActions button[type="submit"] {
+  background-color: #F7931E; /* Laranja Senac */
+  color: #fff;
+}
+
+.modalActions button[type="submit"]:hover {
+  background-color: #c76b15;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;           /* ocupa toda a altura da viewport */
+  width: 100%;
+  color: #004C94;           /* Azul Senac */
+  font-size: 1.5rem;
+  font-weight: 500;
+}
