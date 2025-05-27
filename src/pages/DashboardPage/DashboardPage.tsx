@@ -3,6 +3,7 @@ import React, { useEffect, useState, type FormEvent } from 'react';
 import styles from './DashboardPage.module.css';
 import NavBarComponent from '../../components/NavBar/NavBarComponent';
 import { useNavigate } from 'react-router';
+import ParticipantsModal from '../../components/ParticipantModal/ParticipantModal';
 
 interface Event {
   id: number;
@@ -16,6 +17,7 @@ interface Event {
 }
 
 function DashBoardPage() {
+  const [viewingEventId, setViewingEventId] = useState<number | null>(null);
   const navigate = useNavigate();
   const [events, setEvents] = useState<Event[]>([]);
   const [loading, setLoading] = useState(true);
@@ -121,6 +123,7 @@ function DashBoardPage() {
       }
     }
   };
+  
 
   if (loading) return (
         <div className={styles.loading}>
@@ -155,9 +158,17 @@ function DashBoardPage() {
                 <td>{evt.subscriptionCount}</td>
                 <td>{new Date(evt.createdAt).toLocaleDateString()}</td>
                 <td className={styles.actions}>
-                  <button onClick={() => alert('Implementar visualização')}>
+                  <button onClick={() => setViewingEventId(evt.id)}>
                     Visualizar participantes
                   </button>
+
+
+                  {viewingEventId !== null && (
+                    <ParticipantsModal
+                      eventId={viewingEventId}
+                      onClose={() => setViewingEventId(null)}
+                    />
+                  )}
                   <button onClick={() => openEditModal(evt)}>Editar</button>
                   <button className={styles.deleteBtn} onClick={() => handleDelete(evt.id)}>Excluir</button>
                 </td>

@@ -1,0 +1,97 @@
+/* ParticipantsModal.module.css */
+
+/* Overlay de fundo escuro */
+.pmOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Container do modal */
+.pmModal {
+  background: #fff;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 480px;
+  padding: 1.5rem;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: slideDown 0.3s ease;
+}
+
+/* Botão de fechar */
+.pmClose {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Título do modal */
+.pmModal h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #333;
+}
+
+/* Mensagem de erro */
+.pmError {
+  color: #c53030;
+  background: #ffe5e5;
+  padding: 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Lista de participantes */
+.pmList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pmItem {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.pmItem:last-child {
+  border-bottom: none;
+}
+
+.pmItem strong {
+  color: #333;
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from { background: rgba(0, 0, 0, 0); }
+  to   { background: rgba(0, 0, 0, 0.6); }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

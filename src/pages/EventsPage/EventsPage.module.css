@@ -89,3 +89,26 @@ h1 {
   font-size: 1.5rem;
   font-weight: 500;
 }
+
+/* botão de inscrição */
+.subscribeButton {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #F7931E;
+  border: none;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.subscribeButton:disabled {
+  background-color: #ccc;
+  cursor: default;
+}
+
+.subscribeButton:hover:not(:disabled) {
+  background-color: #c76b15;
+}
+
