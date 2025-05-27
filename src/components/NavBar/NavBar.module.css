@@ -2,19 +2,22 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Logo x Links */
-  background-color: #004C94;       /* Azul Senac */
+  justify-content: space-between; 
   padding: 0.5rem 1rem;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.09);
 }
 
-/* Logo */
 .logo {
   color: #ffffff;
   font-size: 1.5rem;
   font-weight: bold;
 }
 
-/* Container dos botões/links */
+.logo img{
+  height: 80px;
+}
+
 .nav-links {
   display: flex;
   gap: 0.5rem;

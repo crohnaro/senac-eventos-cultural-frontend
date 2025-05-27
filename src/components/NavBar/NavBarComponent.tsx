@@ -7,15 +7,19 @@ export default function NavBarComponent() {
 
   return (
     <nav className={styles.menu}>
-      <div className={styles.logo}>Logo</div>
+      <Link to="/">
+        <div className={styles.logo}>
+          <img src='/src/assets/Senac_logo.svg.png'></img>
+        </div>
+      </Link>
 
       <div className={styles['nav-links']}>
         {user ? (
           <>
-            <Link to="/events">Eventos</Link>
+            <Link to="/">Eventos</Link>
             <Link to="/my-events">Meus Eventos</Link>
             {user.role === 'ORGANIZER' && (
-              <Link to="/create_events">Painel de Eventos</Link>
+              <Link to="/dashboard">Painel de Eventos</Link>
             )}
             <button onClick={logout}>Sair</button>
           </>
